@@ -11,8 +11,16 @@
                 padding: 5px;
             }
             td {
-                text-align: right; <!--글자가 우측으로 붙게해준다.-->
+                text-align: right; 
             }
+            tr:nth-child(even) { 
+                background-color: yellow;
+            }
+            /* even 짝수로 색깔을 입힌다. */
+            tr:nth-child(odd) {
+                background-color: green;
+            }
+            /* odd 홀수로 색을 입힌다 */
             /* table {     
                 border: 1px solid black;  
             }
