@@ -11,7 +11,9 @@
             var arr = ['첫번째', '두번째', '세번째'];
             console.log(arr);
             console.log(arr[0]);
-            console.log(arr.length);
+            console.log(arr.length); //length : 배열길이
+
+
             // 배열에 요소 추가
             arr.push('네번째');
             console.log(arr);
@@ -21,11 +23,13 @@
             
             // 배열 요소 제거
             arr.pop();
-            console.log(arr);
+            console.log(arr); // 가장 마지막을 제거한다.
+           
             // 특정 위치 제거
             delete arr[2]
+            console.log(arr);
             
-            for(var a in arr) {
+            for(var a in arr) { // 이런식의 반복문을 사용할수 있다.  
                 console.log(a);
                 console.log(arr[a]);
             }
@@ -41,7 +45,7 @@
                 arrPrint += "<li style= 'color: red;'>"+arr[i]+"</li>";
             }
             arrPrint += "</ul>";
-            document.getElementById('id1').innerHTML=arrPrint;
+            document.getElementById('id1').innerHTML=arrPrint; // 화면의 
         }
     </script>
 </head>
