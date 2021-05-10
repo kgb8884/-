@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="boardwrite" method="post">
+        제목: <input type="text" name="btitle" value="제목" readonly><br> <!--readonly 사용자가 수정못하게 막아준다.-->
+        작성자: <input type="text" name="bwriter"><br>
+        비밀번호: <input type="password" name="bpassword"><br>
+        내용 : <textarea name="intro" rows="4" cols="20"></textarea><br>
+        <select name="bcategory">
+            <option value="" selected>카테고리</option>
+            <option value="study">공부</option>
+            <option value="travel">여행</option>
+            <option value="Hobby">취미</option>            
+        </select><br>
+        전체공개여부: <input type="radio" name="bopen" value="yes">예
+                     <input type="radio" name="bopen" value="no">아니오<br>
+        <input type="submit" value="저장"><br>
+        <button>저장버튼</button> <!--form태그 내에 있는 button 태그는 submit의 역할을 함-->
+    </form>
+</body>
+</html>
