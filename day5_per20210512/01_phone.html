@@ -10,7 +10,7 @@
             // 세자리숫자-네자리숫자-네자리숫자
             var exp = /^\d{3}-\d{4}-\d{4}$/;
             var phone = document.getElementById('phone').value;
-            var result = document.getElementById('checkresult');
+            var result = document.getElementById('checkreult');
         if(phone.match(exp)){
             result.style.color = 'green';
             result.innerHTML = '유효한형식';

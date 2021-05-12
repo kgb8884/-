@@ -42,7 +42,7 @@
         function pwconfirm() {
             var pw = document.getElementById('pw').value;
             var pwconfirm = document.getElementById('pw-confirm').value;
-            var confirmresult = document.getElementById('pw=confirm-result');
+            var confirmresult = document.getElementById('pw-confirm-result');
             if(pw == pwconfirm){
                 confirmresult.style.color = 'green';
                 confirmresult.innerHTML = '비밀번호 일치';
@@ -54,17 +54,20 @@
         // name
         function namecheck() {
             var name = document.getElementById('name').value;
-            var nameresult = document.getElementById('name=check=result');
+            var nameresult = document.getElementById('name-check-result');
             if(name.length==0){
                 nameresult.style.color = 'red';
                 nameresult.innerHTML = '이름은 필수입니다.';
+            } else {
+                nameresult.style.color = 'green';
+                nameresult.innerHTML = 'good';
             }
         }
         // 전화번호
         function phonecheck(){
             var exp = /^\d{3}-\d{4}-\d{4}$/;
             var phone = document.getElementById('phone').value;
-            var result = document.getElementById('phone=check-result');
+            var result = document.getElementById('phone-check-result');
             if(phone.match(exp)){
                 result.style.color = 'green';
                 result.innerHTML = '유효한형식';
@@ -86,13 +89,13 @@
         <span id="id-check-result"></span><br>
     비밀번호:
         <input type="text" id="pw" placeholder="8~16자리,숫자,대소문자,특수문자포함" onblur="pwcheck()"><br>
-        <span id="pw=check-result"></span>
+        <span id="pw-check-result"></span><br>
     비밀번호 확인:
         <input type="text" id="pw-confirm" onblur="pwconfirm()">
         <span id="pw-confirm-result"></span><br>
     이름:
         <input type="text" id="name" onblur="namecheck()">
-        <span id="pw-confirm-result"></span><br>
+        <span id="name-check-result"></span><br>
     이메일:
         <input type="text" id="email">@
         <input type="text" id="domain">
